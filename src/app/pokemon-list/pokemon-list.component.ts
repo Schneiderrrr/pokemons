@@ -8,15 +8,22 @@ import { ApiService } from '../api.service';
 })
 export class PokemonListComponent implements OnInit {
   pokemons: any[] = [];
+  page = 1;
+  totalPokemons: number = 0;
   
   constructor(private apiservice: ApiService){}
   
   ngOnInit(): void {
-    this.apiservice.get(0, 10).then((response: any) => {
+   this.getPokemons();
+  }
+
+  getPokemons() {
+    this.apiservice.get(this.page + 0, 10).then((response: any) => {
+      this.totalPokemons = response.count;
+
       response.results.forEach((responseElem: any) => {
         this.apiservice.getOne(responseElem.name).then((pokemon) => {
           this.pokemons.push(pokemon);    
-          console.log(pokemon);
         });
       });
     })
