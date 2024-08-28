@@ -5,18 +5,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from "./header/header.component";
-import { PokemonListComponent } from "./pokemon-list/pokemon-list.component";
-import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     PokemonListComponent
   ],
   imports: [
     BrowserModule,
-    CommonModule,
     AppRoutingModule,
     HttpClientModule
 ],
