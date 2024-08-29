@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/test-assignment-frontend",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -103,9 +103,15 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
   },
-  "defaultProject": "test-assignment-frontend"
+  "defaultProject": "test-assignment-frontend",
+  "cli": {
+    "analytics": "0aff47f7-ad55-4c5e-b195-bec856038581"
+  }
 }
