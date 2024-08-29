@@ -16,6 +16,7 @@ import { PokemonListPageComponent } from './pokemon-list-page/pokemon-list-page.
 const routes = [
   {path: '', component: PokemonListPageComponent}
   , {path: ':id', component: SinglePokemonPageComponent}
+  , {path: 'pokemons/:id', component: SinglePokemonPageComponent}
 ]
 
 @NgModule({
