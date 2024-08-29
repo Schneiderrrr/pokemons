@@ -16,7 +16,6 @@ export class SinglePokemonComponent implements OnInit {
   ngOnInit(): void {
     this.id = parseInt(this.route.snapshot.paramMap.get('id')!);
     this.apiservice.getOne(this.id).then((response: any) => {
-      console.log(response);
       this.pokemon = response;
     });
   }
